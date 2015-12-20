@@ -18,7 +18,7 @@ game.GameOverScreen = me.ScreenObject.extend({
             game.data.newHiScore = true;
         }
         me.input.bindKey(me.input.KEY.ENTER, "enter", true);
-        me.input.bindKey(me.input.KEY.SPACE, "enter", false)
+        me.input.bindKey(me.input.KEY.SPACE, "enter", false);
         me.input.bindPointer(me.input.mouse.LEFT, me.input.KEY.ENTER);
 
         this.handler = me.event.subscribe(me.event.KEYDOWN,
@@ -57,6 +57,7 @@ game.GameOverScreen = me.ScreenObject.extend({
         me.game.world.addChild(this.share, 12);
 
         //tweet button
+        // this.tweet = new Tweet(this.share.pos.x + 115, buttonsHeight);
         this.tweet = new Tweet(this.share.pos.x + 170, buttonsHeight);
         me.game.world.addChild(this.tweet, 12);
 
@@ -77,7 +78,7 @@ game.GameOverScreen = me.ScreenObject.extend({
                 // zero size
                 // renderable
                 this._super(me.Renderable, 'init', [0, 0, 100, 100]);
-                this.font = new me.Font('gamefont', 40, 'white', 'left');
+                this.font = new me.Font('gamefont', 40, 'black', 'left');
                 this.steps = 'Steps: ' + game.data.steps.toString();
                 this.topSteps= 'Higher Step: ' + me.save.topSteps.toString();
             },

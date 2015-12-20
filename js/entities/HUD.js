@@ -32,10 +32,10 @@ game.HUD.ScoreItem = me.Renderable.extend({
     init: function(x, y) {
         // call the parent constructor
         // (size does not matter here)
-        this._super(me.Renderable, "init", [x, y, 10, 10]);
+        this._super(me.Renderable, "init", [x, y, 0, 0]);
 
         // local copy of the global score
-        this.stepsFont = new me.Font('gamefont', 80, '#fff', 'center');
+        this.stepsFont = new me.Font('gamefont', 80, '#FFF', 'center');
 
         // make sure we use screen coordinates
         this.floating = true;
@@ -84,8 +84,9 @@ var Share = me.GUI_Object.extend({
     },
 
     onClick: function(event) {
-        var shareText = 'Just made ' + game.data.steps + ' steps on Clumsy Bird! Can you beat me? Try online here!';
-        var url = 'http://ellisonleao.github.io/clumsy-bird/';
+        // CHANGE THIS STUFF
+        var shareText = 'Just made ' + game.data.steps + ' steps on Flappy Khaled! We the best!';
+        var url = 'http://flappykhaled.com/';
         FB.ui(
             {
              method: 'feed',
@@ -111,12 +112,13 @@ var Tweet = me.GUI_Object.extend({
         settings.frameheight = 75;
         this._super(me.GUI_Object, 'init', [x, y, settings]);
     },
-
+    // TWITTER TEXT
     onClick: function(event) {
-        var shareText = 'Just made ' + game.data.steps + ' steps on Clumsy Bird! Can you beat me? Try online here!';
-        var url = 'http://ellisonleao.github.io/clumsy-bird/';
-        var hashtags = 'clumsybird,melonjs'
-        window.open('https://twitter.com/intent/tweet?text=' + shareText + '&hashtags=' + hashtags + '&count=' + url + '&url=' + url, 'Tweet!', 'height=300,width=400')
+        // CHANGE THIS STUFF
+        var shareText = 'Just made ' + game.data.steps + ' steps on Flappy Khaled! We the best!';
+        var url = 'http://flappykhaled.com/';
+        var hashtags = 'flappykhaled,wethebest,anothaone';
+        window.open('https://twitter.com/intent/tweet?text=' + shareText + '&hashtags=' + hashtags + '&count=' + url + '&url=' + url, 'Tweet!', 'height=300,width=400');
         return false;
     }
 
