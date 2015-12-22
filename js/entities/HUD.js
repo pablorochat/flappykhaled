@@ -115,7 +115,7 @@ var Tweet = me.GUI_Object.extend({
     // TWITTER TEXT
     onClick: function(event) {
         // CHANGE THIS STUFF
-        var shareText = 'Just made ' + game.data.steps + ' steps on Flappy Khaled! We the best!';
+        var shareText = 'Just scored ' + game.data.steps + ' on Flappy Khaled! We the best!';
         var url = 'http://flappykhaled.com/';
         var hashtags = 'flappykhaled,wethebest,anothaone';
         window.open('https://twitter.com/intent/tweet?text=' + shareText + '&hashtags=' + hashtags + '&count=' + url + '&url=' + url, 'Tweet!', 'height=300,width=400');
