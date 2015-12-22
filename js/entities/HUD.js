@@ -85,12 +85,12 @@ var Share = me.GUI_Object.extend({
 
     onClick: function(event) {
         // CHANGE THIS STUFF
-        var shareText = 'Just made ' + game.data.steps + ' steps on Flappy Khaled! We the best!';
+        var shareText = 'Just scored ' + game.data.steps + ' on Flappy Khaled! We the best!';
         var url = 'http://flappykhaled.com/';
         FB.ui(
             {
              method: 'feed',
-             name: 'My Clumsy Bird Score!',
+             name: 'Flappy Khaled Score!',
              caption: "Share to your friends",
              description: (
                     shareText
